@@ -1,0 +1,19 @@
+{
+  "name": "alexandregaliay-com",
+  "version": "1.0.0",
+  "description": "New personal website using modern tools",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandregaliay/alexandregaliay-com.git"
+  },
+  "author": "AG",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
