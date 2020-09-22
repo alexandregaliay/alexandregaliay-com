@@ -1,19 +1,15 @@
 {
-  "name": "alexandregaliay-com",
-  "version": "1.0.0",
-  "description": "New personal website using modern tools",
-  "main": "index.js",
-  "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alexandregaliay/alexandregaliay-com.git"
-  },
-  "author": "AG",
-  "license": "ISC",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  }
+		"name": "alexandregaliay-com",
+		"version": "1.0.0",
+		"main": "src/index.html",
+		"scripts": {
+        "start": "parcel src/index.html -p 3000 --open",
+				"build:parcel": "parcel build src/index.html",
+				"build": "npm run clean && npm run build:parcel",
+				"clean": "rm -rf dist/*"
+		},
+		"devDependencies": {
+				"parcel-bundler": "^1.12.4",
+				"sass": "^1.26.11"
+		}
 }
