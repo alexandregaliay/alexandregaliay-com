@@ -1,0 +1,63 @@
+:root {
+  --lambda-width: 200px;
+  --lambda-height: 200px;
+  --lambda-square-thickness: 5px;
+  --primary-color: #282C34;
+  --secondary-color: #E06D06;
+  --square-anim: 0.5s;
+  --lambda-anim: 1s;
+}
+
+#lambda {
+
+  position: relative;
+  width: var(--lambda-width);
+  height: var(--lambda-height);
+  transform: rotate(-45deg);
+  border:var(--lambda-square-thickness) solid;
+  border-color: var(--secondary-color);
+  animation-name: main-square;
+  animation-duration: var(--square-anim);
+
+  &::before, &::after {
+    content:"";
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 15px solid white;
+    top: 0;
+    right: 0;
+    transform: rotate(-70deg) skewX(45deg);
+    transform-origin: 75px 160px;
+    animation-duration: var(--lambda-anim);
+  }
+
+  &::before {
+    border-left:none;
+    border-top:none;
+    border-bottom:none;
+    animation-name: lambda-left;
+  }
+
+  &::after {
+    border-left:none;
+    border-top:none;
+    border-right:none;
+    animation-name: lambda-right;
+  }
+
+}
+
+@keyframes main-square {
+  from { width:0; height:0; opacity:1; }
+}
+
+@keyframes lambda-left {
+  from { left: -100vw; top: -100vw; }
+}
+
+@keyframes lambda-right {
+  from { right: -100vw; bottom: -100vw; }
+}

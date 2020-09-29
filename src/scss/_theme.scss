@@ -1,3 +1,7 @@
-body { padding:20px; }
-#app { padding:50px; display:flex; height:calc(100vh - 40px); align-items:center; justify-content:center; border:5px solid #FFF; }
+header {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  min-height:350px;
+}
 h1 { font-weight:100; font-size:2em; line-height:1.3em; }
