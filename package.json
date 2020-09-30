@@ -12,6 +12,6 @@
 				"rebuild": "yarn run clean && yarn run build"
 		},
 		"devDependencies": {
-				"sass": "^1.26.11",
+				"sass": "^1.26.11"
 		}
 }
