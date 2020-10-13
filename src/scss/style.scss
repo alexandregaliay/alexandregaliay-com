@@ -1,3 +1,47 @@
-@import '_config.scss';
-@import '_lambda.scss';
-@import '_theme.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+  --font-family: "Roboto", sans-serif;
+  --font-weight: "500";
+  --background-color: #121212;
+  --overlay-color: #1F1F1F;
+  --primary-color: #bb86fc;
+  --secondary-color: #03DAC6;
+  --text-color: #FFF;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+#overlay {
+  background: var(--overlay-color);
+  margin: 20px;
+  padding: 20px 30px;
+}
+
+header {
+
+}
+main {
+
+}
+h1 {
+  font-weight: 100;
+  font-size: 2em;
+  line-height: 1.3em;
+  margin:0 0 1em 0;
+  color: var(--primary-color);
+}
