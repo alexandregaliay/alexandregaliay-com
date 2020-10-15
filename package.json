@@ -11,17 +11,13 @@
 				"clean": "rm -rf dist/*",
 				"rebuild": "yarn run clean && yarn run build"
 		},
-		"devDependencies": {
-				"@vue/component-compiler-utils": "^3.2.0",
-				"sass": "^1.26.11",
-				"vue-template-compiler": "^2.6.12"
-		},
 		"dependencies": {
-				"@prismicio/vue": "^2.0.7",
-				"js": "^0.1.0",
-				"prismic-dom": "^2.2.4",
-				"prismic-javascript": "^3.0.2",
 				"vue": "^2.6.12",
 				"vue-hot-reload-api": "^2.3.4"
+		},
+		"devDependencies": {
+				"@vue/component-compiler-utils": "^3.2.0",
+				"sass": "^1.27.0",
+				"vue-template-compiler": "^2.6.12"
 		}
 }
