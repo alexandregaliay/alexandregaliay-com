@@ -15,11 +15,13 @@
     <p class="links">
       <a href="#">Email</a>
       <span>/</span>
-      <a href="#">LinkedIn</a>
+      <a target="_blank" href="https://twitter.com/alexandregaliay">Twitter</a>
       <span>/</span>
-      <a href="#">GitHub</a>
+      <a target="_blank" href="https://www.linkedin.com/in/alexandre-galiay/">LinkedIn</a>
       <span>/</span>
-      <a href="#">Codepen</a>
+      <a target="_blank" href="https://codepen.io/alexandregaliay">Codepen</a>
+      <span>/</span>
+      <a target="_blank" href="https://github.com/alexandregaliay">GitHub</a>
     </p>
   </div>
 </template>
