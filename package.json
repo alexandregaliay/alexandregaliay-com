@@ -7,7 +7,8 @@
 		"main": "src/index.html",
 		"scripts": {
 				"serve": "parcel index.html --open",
-				"build": "parcel build index.html",
+        "play": "parcel play.html --open",
+        "build": "parcel build *.html",
 				"clean": "rm -rf dist/*",
 				"rebuild": "yarn run clean && yarn run build"
 		},
