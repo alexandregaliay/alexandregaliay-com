@@ -73,3 +73,43 @@ a {
     }
   }
 }
+
+#wrapper {
+  padding: 10%;
+}
+
+#icon {
+  width: 50px;
+}
+
+h1 {
+  font-family: "Vollkorn";
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1.3em;
+  margin:0.25em 0 0.5em 0;
+  color: var(--primary-color);
+}
+
+h2 {
+  margin: 0.5em 0;
+  font-weight: 300;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+.links {
+  margin: 0.5em 0 0 0;
+
+  span {
+    font-weight: 100;
+  }
+}
+
+footer {
+  padding: 0 10%;
+  font-size: 0.6em;
+  font-style: italic;
+}
