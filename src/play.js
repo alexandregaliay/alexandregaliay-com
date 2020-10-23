@@ -18,10 +18,11 @@ class Sketch {
     this.x = 0;
     this.y = 0;
     this.colors = [
-      "#e154ed",
-      "#63d62b",
-      "#23b1b6",
-      "#ebbd3e"
+      "#541388",
+      "#D90368",
+      "#F1E9DA",
+      "#2E294E",
+      "#FFD400"
     ]
   }
 
