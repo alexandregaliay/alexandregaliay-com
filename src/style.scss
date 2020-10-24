@@ -108,6 +108,51 @@ p {
         transform: scaleX(1);
       }
     }
+
+    &.email {
+      position: relative;
+
+      .tooltip {
+        visibility: hidden;
+        width: 110px;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        font-weight: 400;
+        font-size: 0.7em;
+        line-height: 1.5em;
+        text-align: center;
+        padding: 5px 0;
+
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: 135%;
+        left: 50%;
+        margin-left: -55px;
+
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      /* Tooltip arrow */
+      .tooltip::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent var(--primary-color);
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      &:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 }
 
