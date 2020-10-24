@@ -6,9 +6,8 @@
 		"author": "alexandregaliay <dev@alexandregaliay.com>",
 		"main": "src/index.html",
 		"scripts": {
-				"serve": "parcel index.html --open",
-        "play": "parcel play.html --open",
-        "build": "parcel build *.html",
+				"serve": "parcel src/index.html --open",
+        "build": "parcel build src/*.html",
 				"clean": "rm -rf dist/*",
 				"rebuild": "yarn run clean && yarn run build"
 		},

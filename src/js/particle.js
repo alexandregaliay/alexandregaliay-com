@@ -22,6 +22,7 @@ export default class Particle {
     this.life -= 0.1;
     this.size = this.defaultSize * this.life / this.maxLife;
     ctx.fillStyle = this.color;
+    
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.fillRect(0, 0, this.size, this.size);

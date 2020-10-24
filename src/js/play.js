@@ -31,7 +31,7 @@ class Sketch {
   }
 
   mousemove() {
-    this.canvas.addEventListener('mousemove',(e)=>{
+    this.canvas.addEventListener('mousemove', (e)=>{
       this.x = e.clientX;
       this.y = e.clientY;
       for(let i = 0; i < 6; i++) {
