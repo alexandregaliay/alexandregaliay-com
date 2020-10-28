@@ -12,6 +12,7 @@
 				"rebuild": "yarn run clean && yarn run build"
 		},
 		"devDependencies": {
+				"cssnano": "^4.1.10",
 				"sass": "^1.27.0"
 		}
 }
