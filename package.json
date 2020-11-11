@@ -6,7 +6,7 @@
 		"author": "alexandregaliay <dev@alexandregaliay.com>",
 		"main": "src/index.html",
 		"scripts": {
-				"serve": "parcel src/index.html --open",
+				"serve": "parcel src/index.html",
 				"build": "parcel build src/*.html",
 				"clean": "rm -rf dist/*",
 				"rebuild": "yarn run clean && yarn run build"
@@ -15,5 +15,8 @@
 				"cssnano": "^4.1.10",
 				"parcel-bundler": "^1.12.4",
 				"sass": "^1.27.0"
+		},
+		"dependencies": {
+				"three": "^0.122.0"
 		}
 }
