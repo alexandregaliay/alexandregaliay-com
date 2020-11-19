@@ -49,11 +49,11 @@ export default class Particles {
     this.x = 0;
     this.y = 0;
     this.colors = [
-      "#541388",
-      "#D90368",
-      "#F1E9DA",
-      "#2E294E",
-      "#FFD400"
+      "#333333",
+      "#570296",
+      "#ff7edb",
+      "#36f9f6",
+      "#FFFFFF"
     ]
   }
 

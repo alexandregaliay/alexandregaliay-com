@@ -6,8 +6,8 @@
 		"author": "alexandregaliay <dev@alexandregaliay.com>",
 		"main": "src/index.html",
 		"scripts": {
-				"serve": "parcel src/index.html",
-				"build": "rm -rf dist/* && parcel build src/*.html"
+				"dev": "rm -Rf dist/* && parcel src/index.html",
+				"build": "rm -Rf dist/* && parcel build src/*.html"
 		},
 		"devDependencies": {
 				"cssnano": "^4.1.10",
