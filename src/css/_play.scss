@@ -1,12 +1,14 @@
 .play {
-  --primary-color: #36f9f6;
-  --alt-color: #ff7edb;
+  --primary-color: #fede5d;
+  --text-color: #72f1b8;
+  --alt-color-1: #03edf9;
+  --alt-color-2: #f97e72;
+  --alt-color-3: #ff7edb;
 
   #icon path {
-    fill: var(--alt-color);
+    fill: var(--alt-color-1);
   }
 }
-
 canvas.particles {
   position: fixed;
   left: 0;
@@ -25,9 +27,13 @@ canvas.three-grid {
 .exit {
   font-style: normal;
   margin: 50px 0 0;
-  span {
+  .letters {
     font-family: "aa_qwertz-tastenregular";
     font-size: 70px;
-    color: var(--alt-color);
+    color: var(--alt-color-2);
+
+    .active {
+      color: var(--alt-color-3);
+    }
   }
 }

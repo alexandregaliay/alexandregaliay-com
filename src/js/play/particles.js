@@ -52,8 +52,10 @@ export default class Particles {
       "#333333",
       "#570296",
       "#ff7edb",
-      "#36f9f6",
-      "#FFFFFF"
+      "#f97e72",
+      "#03edf9",
+      "#72f1b8",
+      "#fede5d"
     ]
   }
 
