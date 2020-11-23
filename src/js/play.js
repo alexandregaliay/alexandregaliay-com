@@ -1,18 +1,30 @@
 import Particles from './play/particles.js';
 import RetroGrid from './play/retrogrid.js';
 
-document.querySelector('footer a').addEventListener('click', createPlayground);
+document.querySelector('footer a').addEventListener('click', (event) => {
+  if (!document.body.classList.contains('play')) {
+    createPlayground();
+  }
+  event.preventDefault();
+});
 
-// Start playing
-function createPlayground(event) {
+
+function createPlayground() {
   document.body.classList.add('play');
   new Particles();
   new RetroGrid();
+  
+  const name = document.createElement('h5');
+  name.innerText = document.querySelector('h1 em').innerText;
+  document.querySelector('main').append(name);
+  
+  const job = document.createElement('h6');
+  job.innerText = document.querySelector('h2 em').innerText;
+  document.querySelector('main').append(job);
+  
   insertExit();
-  event.preventDefault;
 }
 
-// Exit door
 function insertExit() {
   const exitTag = document.createElement('div');
   exitTag.className = 'exit';
@@ -33,7 +45,9 @@ function insertExit() {
 
   let userInput = new Array(keySequence.length);
   window.addEventListener('keydown', ({ key }) => {
-    document.querySelector('.letter_' + key).classList.add('active');
+    if (document.querySelector('.letter_' + key)) {
+      document.querySelector('.letter_' + key).classList.add('active');
+    }
     userInput = [ ...userInput.slice( 1 ), key ];
     if (keySequence.every((v, k) => v === userInput[k])) {
       deletePlayground();
@@ -41,13 +55,16 @@ function insertExit() {
   });
 
   window.addEventListener('keyup', ({ key }) => {
-    document.querySelector('.letter_' + key).classList.remove('active');
+    if (document.querySelector('.letter_' + key)) {
+      document.querySelector('.letter_' + key).classList.remove('active');
+    }
   });
 }
 
-// Stop playing
 function deletePlayground() {
   document.body.classList.remove('play');
+  document.querySelector('h5').remove();
+  document.querySelector('h6').remove();
   document.querySelector('.exit').remove();
   document.querySelector('.particles').remove();
   document.querySelector('.three-grid').remove();
