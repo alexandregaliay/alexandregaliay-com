@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Road Rage";
+  src: url("RoadRage.woff2") format("woff2"),
+    url("RoadRage.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "aa QWERTZ-Tasten";
+  src: url("aaQWERTZ-Tasten.woff2") format("woff2"),
+    url("aaQWERTZ-Tasten.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coubra";
+  src: url("Coubra.woff2") format("woff2"), url("Coubra.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

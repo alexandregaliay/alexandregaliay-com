@@ -4,7 +4,7 @@ class Particle {
     this.y = y;
     this.velX = 4*(Math.random() - 0.5);
     this.velY = 4*(Math.random() - 0.5);
-    this.defaultSize = 10;
+    this.defaultSize = 5;
     this.color = color;
     this.maxLife = 10;
     this.life = 10;
