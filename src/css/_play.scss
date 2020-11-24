@@ -53,10 +53,11 @@
   }
 
   .exit {
-    font-style: normal;
+    margin-top: 2em;
     .letters {
+      font-style: normal;
       font-family: "aa QWERTZ-Tasten";
-      font-size: 45px;
+      font-size: 5em;
       color: var(--alt-color-4);
       .active {
         color: var(--alt-color-5);
