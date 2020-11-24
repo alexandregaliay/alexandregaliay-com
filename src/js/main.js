@@ -1,3 +1,4 @@
+// Email & tooltip
 const emailValue = 'hello@alexandregaliay.com';
 const emailLink = document.querySelector('.email');
 const tooltip = document.querySelector('.tooltip');
@@ -22,3 +23,10 @@ function updateTooltip() {
     tooltip.textContent = origText;
   }
 }
+
+// Trigger animations
+import triggerAnimation from './anim.js';
+triggerAnimation('#page-transition');
+triggerAnimation('#wrapper');
+triggerAnimation('.links');
+triggerAnimation('footer');

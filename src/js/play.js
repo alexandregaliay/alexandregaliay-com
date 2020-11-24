@@ -1,5 +1,6 @@
 import Particles from './play/particles.js';
 import RetroGrid from './play/retrogrid.js';
+import triggerAnimation from './anim.js';
 
 document.querySelector('footer a').addEventListener('click', (event) => {
   if (!document.body.classList.contains('play')) {
@@ -11,6 +12,10 @@ document.querySelector('footer a').addEventListener('click', (event) => {
 
 function createPlayground() {
   document.body.classList.add('play');
+  triggerAnimation('#page-transition', false);
+  triggerAnimation('#wrapper', false);
+  triggerAnimation('footer', false);
+  
   new Particles();
   new RetroGrid();
   
@@ -62,10 +67,17 @@ function insertExit() {
 }
 
 function deletePlayground() {
-  document.body.classList.remove('play');
   document.querySelector('h5').remove();
   document.querySelector('h6').remove();
   document.querySelector('.exit').remove();
   document.querySelector('.particles').remove();
   document.querySelector('.three-grid').remove();
+  
+  // Re trigger animations
+  triggerAnimation('#page-transition',false);
+  triggerAnimation('#wrapper',false);
+  triggerAnimation('.links',false);
+  triggerAnimation('footer',false);
+
+  document.body.classList.remove('play');
 }
