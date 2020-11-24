@@ -37,10 +37,12 @@
 
   h6 {
     font-family: "Coubra";
-    color: var(--alt-color-3);
     font-weight: normal;
     font-size: 2em;
     line-height: 1.3em;
+    background: linear-gradient(to top, var(--alt-color-3), var(--alt-color-4));
+    color: transparent;
+    background-clip: text;
   }
 }
 canvas.particles {
