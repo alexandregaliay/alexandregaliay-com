@@ -10,11 +10,23 @@
 				"build": "rm -Rf dist/* && parcel build src/*.html"
 		},
 		"devDependencies": {
+				"autoprefixer": "^9.8.6",
 				"cssnano": "^4.1.10",
 				"parcel-bundler": "^1.12.4",
 				"sass": "^1.27.0"
 		},
 		"dependencies": {
 				"three": "^0.122.0"
+		},
+		"postcss": {
+				"plugins": {
+						"autoprefixer": {
+								"overrideBrowserslist": [
+										"> 1%",
+										"last 4 versions",
+										"ie >= 9"
+								]
+						}
+				}
 		}
 }
