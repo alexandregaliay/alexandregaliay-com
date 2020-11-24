@@ -1,12 +1,19 @@
 @import "../assets/font/stylesheet.css";
 
 .play {
+  --grid-color: #570296;
   --alt-color-1: #03edf9;
   --alt-color-2: #ff7edb;
   --alt-color-3: #f97e72;
   --alt-color-4: #fede5d;
   --alt-color-5: #72f1b8;
+
+  background: #000;
   text-align: center;
+
+  #page-transition.animate {
+    background: var(--grid-color);
+  }
 
   #wrapper {
     padding-top: 5%;
@@ -44,28 +51,43 @@
     color: transparent;
     background-clip: text;
   }
-}
-canvas.particles {
-  position: fixed;
-  left: 0;
-  top: 0;
-}
 
-canvas.three-grid {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -2;
-}
+  .exit {
+    font-style: normal;
+    .letters {
+      font-family: "aa QWERTZ-Tasten";
+      font-size: 45px;
+      color: var(--alt-color-4);
+      .active {
+        color: var(--alt-color-5);
+      }
+    }
+  }
 
-.exit {
-  font-style: normal;
-  .letters {
-    font-family: "aa QWERTZ-Tasten";
-    font-size: 45px;
-    color: var(--alt-color-4);
-    .active {
-      color: var(--alt-color-5);
+  canvas.particles {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  canvas.three-grid {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    opacity: 0;
+    animation-name: gridFadeIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes gridFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
