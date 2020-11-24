@@ -43,7 +43,7 @@ p {
 }
 
 .links {
-  margin: 0.5em 0 0 0;
+  margin: 1em 0 0 0;
 
   span {
     font-weight: 100;
@@ -81,10 +81,30 @@ p {
 
 footer {
   padding: 0 10%;
-  font-size: 0.5em;
+  font-size: 0.4em;
   font-style: italic;
 
   a {
     color: var(--text-color);
+  }
+}
+
+@media all and (max-width: 480px) {
+  footer {
+    display: none;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    span {
+      display: none;
+    }
+    a {
+      &::before {
+        content: ":: ";
+        color: var(--text-color);
+      }
+    }
   }
 }
