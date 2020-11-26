@@ -75,7 +75,7 @@ export default class RetroGrid {
     this.clock = new THREE.Clock();
     this.time = 0;
     this.render();
-    this.resize();
+    window.addEventListener('resize', this.resize.bind(this));
   }
 
   render() {
@@ -89,6 +89,5 @@ export default class RetroGrid {
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize( window.innerWidth, window.innerHeight );
-    window.addEventListener('resize', this.resize.bind(this));
   }
 }
