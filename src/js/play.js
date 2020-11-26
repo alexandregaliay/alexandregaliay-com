@@ -2,6 +2,9 @@ import Particles from './play/particles.js';
 import RetroGrid from './play/retrogrid.js';
 import triggerAnimation from './anim.js';
 
+var particles;
+var retroGrid;
+
 document.querySelector('footer a').addEventListener('click', (event) => {
   if (!document.body.classList.contains('play')) {
     createPlayground();
@@ -9,15 +12,14 @@ document.querySelector('footer a').addEventListener('click', (event) => {
   event.preventDefault();
 });
 
-
 function createPlayground() {
   document.body.classList.add('play');
   triggerAnimation('#page-transition', false);
   triggerAnimation('#wrapper', false);
   triggerAnimation('footer', false);
   
-  new Particles();
-  new RetroGrid();
+  particles = new Particles();
+  retroGrid = new RetroGrid();
   
   const name = document.createElement('h5');
   name.innerText = document.querySelector('h1 em').innerText;
@@ -67,6 +69,8 @@ function insertExit() {
 }
 
 function deletePlayground() {
+  retroGrid = null;
+  particles = null;
   document.querySelector('h5').remove();
   document.querySelector('h6').remove();
   document.querySelector('.exit').remove();
