@@ -15,6 +15,7 @@ function copyEmail(event) {
   document.execCommand('copy');
   document.body.removeChild(el);
   tooltip.textContent = 'Copied';
+  setTimeout(updateTooltip, 3000);
   event.preventDefault();
 }
 
