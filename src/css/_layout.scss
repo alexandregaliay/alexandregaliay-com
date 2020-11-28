@@ -1,8 +1,8 @@
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
   background: var(--background-color);
   color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1.4em;
   line-height: 1.8em;
 }
@@ -12,13 +12,13 @@ em {
 }
 
 a {
-  text-decoration: none;
   font-weight: 300;
+  text-decoration: none;
 }
 
 #wrapper {
-  padding: 10% 10% 5% 10%;
   opacity: 0;
+  padding: 10% 10% 5% 10%;
 
   @media all and (max-width: 768px) {
     padding-bottom: 8%;
@@ -30,12 +30,12 @@ a {
 }
 
 h1 {
+  margin: 0.25em 0 0.5em 0;
+  color: var(--primary-color);
   font-family: "Vollkorn";
   font-weight: normal;
   font-size: 2em;
   line-height: 1.3em;
-  margin: 0.25em 0 0.5em 0;
-  color: var(--primary-color);
 }
 
 h2 {
@@ -107,20 +107,26 @@ footer {
     display: flex;
     flex-direction: column;
 
-    span {
+    & > span {
       display: none;
     }
 
-    a {
+    a::before {
+      content: ":: ";
+      color: var(--text-color);
+    }
+
+    .tooltip {
+      color: var(--text-color);
+      font-size: 0.7em;
+      font-weight: 300;
+
       &::before {
-        content: ":: ";
-        color: var(--text-color);
+        content: "(";
       }
 
-      &.email::after {
-        content: "(click to copy)";
-        font-size: 0.8em;
-        color: var(--text-color);
+      &::after {
+        content: ")";
       }
     }
   }
