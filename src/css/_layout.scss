@@ -26,7 +26,13 @@ a {
 }
 
 .icon {
-  width: 50px;
+  width: 70px;
+  @media all and (max-width: 768px) {
+    width: 60px;
+  }
+  @media all and (max-width: 480px) {
+    width: 50px;
+  }
 }
 
 h1 {
