@@ -7,6 +7,3 @@ triggerAnimation('#page-transition');
 triggerAnimation('#wrapper');
 triggerAnimation('.links');
 triggerAnimation('footer');
-
-// Play
-import './play.js';
