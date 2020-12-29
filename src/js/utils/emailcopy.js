@@ -1,13 +1,9 @@
-// Email & tooltip
-const emailValue = 'hello@alexandregaliay.com';
-const emailLink = document.querySelector('.email');
+let emailValue = 'hello@alexandregaliay.com';
+let emailLink = document.querySelector('.email');
 const tooltip = document.querySelector('.tooltip');
-const origText = tooltip.textContent;
+let origText = tooltip.textContent;
 
-emailLink.addEventListener('click', copyEmail);
-emailLink.addEventListener('mouseover', updateTooltip);
-
-function copyEmail(event) {
+function copyValue(event) {
   const el = document.createElement('textarea');
   el.value = emailValue;
   document.body.appendChild(el);
@@ -24,3 +20,9 @@ function updateTooltip() {
     tooltip.textContent = origText;
   }
 }
+
+export default function emailCopy() {
+  emailLink.addEventListener('click', copyValue);
+  emailLink.addEventListener('mouseover', updateTooltip);
+}
+

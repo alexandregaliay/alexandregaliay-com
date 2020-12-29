@@ -1,8 +1,7 @@
-// Email & tooltip
-import './email.js';
+import emailCopy from './utils/emailcopy.js';
+emailCopy();
 
-// Trigger animations
-import triggerAnimation from './anim.js';
+import triggerAnimation from './utils/triggeranimation.js';
 triggerAnimation('#page-transition');
 triggerAnimation('#wrapper');
 triggerAnimation('.links');
