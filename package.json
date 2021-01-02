@@ -8,7 +8,7 @@
 		"scripts": {
 				"dev": "rm -Rf dist/* && parcel src/index.html",
 				"build": "rm -Rf dist/* && parcel build src/*.html",
-				"cleanup": "rm -Rf node_modules .cache yarn.lock && yarn"
+				"cleanup": "rm -Rf node_modules .cache && yarn"
 		},
 		"devDependencies": {
 				"autoprefixer": "^9.8.6",
