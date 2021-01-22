@@ -1,33 +1,22 @@
 {
-		"name": "alexandregaliay-com",
-		"version": "1.0.0",
-		"license": "MIT",
-		"repository": "https://github.com/alexandregaliay/alexandregaliay-com.git",
-		"author": "alexandregaliay <dev@alexandregaliay.com>",
-		"main": "src/index.html",
-		"scripts": {
-				"dev": "rm -Rf dist/* && parcel src/index.html",
-        "build": "rm -Rf dist/* && parcel build src/*.html",
-        "cleanup": "rm -Rf node_modules .cache yarn.lock && yarn"
-		},
-		"devDependencies": {
-				"autoprefixer": "^9.8.6",
-				"cssnano": "^4.1.10",
-				"parcel-bundler": "^1.12.4",
-				"sass": "^1.27.0"
-		},
-		"dependencies": {
-				"three": "^0.122.0"
-		},
-		"postcss": {
-				"plugins": {
-						"autoprefixer": {
-								"overrideBrowserslist": [
-										"> 1%",
-										"last 4 versions",
-										"ie >= 9"
-								]
-						}
-				}
-		}
+  "name": "alexandregaliay-com",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/alexandregaliay/alexandregaliay-com.git",
+  "author": "alexandregaliay <dev@alexandregaliay.com>",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "rm -Rf dist/* && parcel src/index.html",
+    "build": "rm -Rf dist/* && parcel build src/*.html",
+    "cleanup": "rm -Rf node_modules .cache && yarn"
+  },
+  "dependencies": {
+    "three": "^0.122.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.27.0"
+  }
 }
