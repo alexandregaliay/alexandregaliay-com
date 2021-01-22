@@ -1,5 +1,6 @@
 // Email & tooltip
-import './email.js';
+import emailCopy from './email.js'
+emailCopy()
 
 // Trigger animations
 import triggerAnimation from './anim.js';
