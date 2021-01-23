@@ -1,7 +1,9 @@
-# alexandregaliay-com
+![AG Logo](https://avatars.githubusercontent.com/u/46491669?s=70)
+
+# AG
 
 New personal website using modern tools
 
-- Parcel
-- Sass
-- Javascript
+- :package: Parcel
+- :nail_care: Sass
+- :sparkles: Javascript
