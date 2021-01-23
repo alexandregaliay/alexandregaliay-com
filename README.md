@@ -7,3 +7,5 @@ New personal website using modern tools
 - :package: Parcel
 - :nail_care: Sass
 - :sparkles: Javascript
+
+:point_right: [Live](https://www.alexandregaliay.com)
