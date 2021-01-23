@@ -1,87 +1,87 @@
-import Particles from './play/particles.js';
-import RetroGrid from './play/retrogrid.js';
-import triggerAnimation from './anim.js';
+import Particles from './play/particles.js'
+import RetroGrid from './play/retrogrid.js'
+import triggerAnimation from './utils/anim.js'
 
-var particles;
-var retroGrid;
+var particles
+var retroGrid
 
 document.querySelector('footer a').addEventListener('click', (event) => {
   if (!document.body.classList.contains('play')) {
-    createPlayground();
+    createPlayground()
   }
-  event.preventDefault();
-});
+  event.preventDefault()
+})
 
 function createPlayground() {
-  document.body.classList.add('play');
-  triggerAnimation('#page-transition', false);
-  triggerAnimation('#wrapper', false);
-  triggerAnimation('footer', false);
-  
-  particles = new Particles();
-  retroGrid = new RetroGrid();
-  
-  const name = document.createElement('h5');
-  name.innerText = document.querySelector('h1 em').innerText;
-  document.querySelector('main').append(name);
-  
-  const job = document.createElement('h6');
-  job.innerText = document.querySelector('h2 em').innerText;
-  document.querySelector('main').append(job);
-  
-  insertExit();
+  document.body.classList.add('play')
+  triggerAnimation('#page-transition', false)
+  triggerAnimation('#wrapper', false)
+  triggerAnimation('footer', false)
+
+  particles = new Particles()
+  retroGrid = new RetroGrid()
+
+  const name = document.createElement('h5')
+  name.innerText = document.querySelector('h1 em').innerText
+  document.querySelector('main').append(name)
+
+  const job = document.createElement('h6')
+  job.innerText = document.querySelector('h2 em').innerText
+  document.querySelector('main').append(job)
+
+  insertExit()
 }
 
 function insertExit() {
-  const exitTag = document.createElement('div');
-  exitTag.className = 'exit';
-  
-  const exitLetters = document.createElement('span');
-  exitLetters.className = 'letters';
+  const exitTag = document.createElement('div')
+  exitTag.className = 'exit'
 
-  const keySequence = ['b', 'a', 'c', 'k'];
+  const exitLetters = document.createElement('span')
+  exitLetters.className = 'letters'
+
+  const keySequence = ['b', 'a', 'c', 'k']
   keySequence.forEach(letter => {
-    const letterSpan = document.createElement('span');
-    letterSpan.innerText = letter;
-    letterSpan.className = 'letter_' + letter;
-    exitLetters.append(letterSpan);
-  });
+    const letterSpan = document.createElement('span')
+    letterSpan.innerText = letter
+    letterSpan.className = 'letter_' + letter
+    exitLetters.append(letterSpan)
+  })
 
-  exitTag.append(exitLetters);
-  document.querySelector('footer').append(exitTag);
+  exitTag.append(exitLetters)
+  document.querySelector('footer').append(exitTag)
 
-  let userInput = new Array(keySequence.length);
+  let userInput = new Array(keySequence.length)
   window.addEventListener('keydown', ({ key }) => {
     if (document.querySelector('.letter_' + key)) {
-      document.querySelector('.letter_' + key).classList.add('active');
+      document.querySelector('.letter_' + key).classList.add('active')
     }
-    userInput = [ ...userInput.slice( 1 ), key ];
+    userInput = [ ...userInput.slice( 1 ), key ]
     if (keySequence.every((v, k) => v === userInput[k])) {
-      deletePlayground();
+      deletePlayground()
     }
-  });
+  })
 
   window.addEventListener('keyup', ({ key }) => {
     if (document.querySelector('.letter_' + key)) {
-      document.querySelector('.letter_' + key).classList.remove('active');
+      document.querySelector('.letter_' + key).classList.remove('active')
     }
-  });
+  })
 }
 
 function deletePlayground() {
-  retroGrid = null;
-  particles = null;
-  document.querySelector('h5').remove();
-  document.querySelector('h6').remove();
-  document.querySelector('.exit').remove();
-  document.querySelector('.particles').remove();
-  document.querySelector('.three-grid').remove();
-  
-  // Re trigger animations
-  triggerAnimation('#page-transition',false);
-  triggerAnimation('#wrapper',false);
-  triggerAnimation('.links',false);
-  triggerAnimation('footer',false);
+  retroGrid = null
+  particles = null
+  document.querySelector('h5').remove()
+  document.querySelector('h6').remove()
+  document.querySelector('.exit').remove()
+  document.querySelector('.particles').remove()
+  document.querySelector('.three-grid').remove()
 
-  document.body.classList.remove('play');
+  // Re trigger animations
+  triggerAnimation('#page-transition',false)
+  triggerAnimation('#wrapper',false)
+  triggerAnimation('.links',false)
+  triggerAnimation('footer',false)
+
+  document.body.classList.remove('play')
 }
