@@ -21,9 +21,7 @@ function updateTooltip() {
   }
 }
 
-function emailCopy() {
+export function emailCopy() {
   emailLink.addEventListener('click', copyValue)
   emailLink.addEventListener('mouseover', updateTooltip)
 }
-
-export { emailCopy }
