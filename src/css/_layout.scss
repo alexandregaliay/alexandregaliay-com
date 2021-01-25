@@ -113,6 +113,10 @@ footer {
     display: flex;
     flex-direction: column;
 
+    a {
+      margin-bottom: 5px;
+    }
+
     & > span {
       display: none;
     }
