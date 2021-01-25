@@ -10,4 +10,11 @@ triggerAnimation('.links')
 triggerAnimation('footer')
 
 // Play
-import './play.js'
+document.querySelector('footer a').addEventListener('click', (event) => {
+  if (!document.body.classList.contains('play')) {
+    import('./play.js').then(function(page) {
+      page.init()
+    })
+  }
+  event.preventDefault()
+})
