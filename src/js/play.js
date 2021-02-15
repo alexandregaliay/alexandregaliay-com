@@ -3,13 +3,8 @@ import RetroGrid from './play/retrogrid.js'
 import triggerAnimation from './utils/anim.js'
 
 export function init() {
-  document.body.classList.add('play')
-  triggerAnimation('#page-transition', false)
-  triggerAnimation('#wrapper', false)
-  triggerAnimation('footer', false)
-
-  new Particles()
-  new RetroGrid()
+  let particles = new Particles()
+  let retrogrid = new RetroGrid()
 
   const name = document.createElement('h5')
   name.innerText = document.querySelector('h1 em').innerText
@@ -36,14 +31,20 @@ export function init() {
   exitTag.append(exitLetters)
   document.querySelector('footer').append(exitTag)
 
-  let userInput = new Array(keySequence.length)
+  let keyUp = function (e) {
+    if (document.querySelector('.letter_' + e.key)) {
+      document.querySelector('.letter_' + e.key).classList.remove('active')
+    }
+  }
+  window.addEventListener('keyup', keyUp, true)
 
-  window.addEventListener('keydown', ({ key }) => {
-    if (document.querySelector('.letter_' + key)) {
-      document.querySelector('.letter_' + key).classList.add('active')
+  let userInput = new Array(keySequence.length)
+  let keyDown = function (e) {
+    if (document.querySelector('.letter_' + e.key)) {
+      document.querySelector('.letter_' + e.key).classList.add('active')
     }
 
-    userInput = [ ...userInput.slice( 1 ), key ]
+    userInput = [ ...userInput.slice( 1 ), e.key ]
     if (keySequence.every((v, k) => v === userInput[k])) {
       // Remove playground
       document.querySelector('h5').remove()
@@ -51,6 +52,10 @@ export function init() {
       document.querySelector('.exit').remove()
       document.querySelector('.particles').remove()
       document.querySelector('.three-grid').remove()
+      window.removeEventListener('keyup', keyUp, true)
+      window.removeEventListener('keydown', keyDown, true)
+      particles = null
+      retrogrid = null
 
       // Re trigger animations
       triggerAnimation('#page-transition',false)
@@ -60,11 +65,6 @@ export function init() {
 
       document.body.classList.remove('play')
     }
-  })
-
-  window.addEventListener('keyup', ({ key }) => {
-    if (document.querySelector('.letter_' + key)) {
-      document.querySelector('.letter_' + key).classList.remove('active')
-    }
-  })
+  }
+  window.addEventListener('keydown', keyDown, true)
 }
