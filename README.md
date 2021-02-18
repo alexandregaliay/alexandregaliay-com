@@ -1,4 +1,4 @@
-![AG Logo](https://avatars.githubusercontent.com/u/46491669?s=70)
+![AG Logo](https://github.com/alexandregaliay/alexandregaliay-com/blob/master/src/assets/img/logo.png)
 
 # Alexandre Galiay
 
