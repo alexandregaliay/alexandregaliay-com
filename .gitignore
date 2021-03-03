@@ -1,6 +1,12 @@
+# MacOS & VSCode
 .DS_Store
+.vscode
+
+# Yarn & Parcel
 node_modules
+yarn-error.log
 dist
 .cache
-yarn-error.log
-.vscode
+
+# Local Netlify folder
+.netlify
