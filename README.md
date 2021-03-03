@@ -1,4 +1,4 @@
-![AG Logo](https://avatars.githubusercontent.com/u/46491669?s=70)
+<img src="src/assets/img/logo.svg" width="70" height="70" />
 
 # Alexandre Galiay
 
