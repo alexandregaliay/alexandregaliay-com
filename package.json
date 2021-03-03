@@ -11,7 +11,7 @@
     "cleanup": "rm -Rf node_modules .cache && yarn"
   },
   "dependencies": {
-    "three": "^0.122.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
