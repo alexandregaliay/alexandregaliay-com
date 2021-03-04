@@ -2,11 +2,10 @@
 .DS_Store
 .vscode
 
-# Yarn & Parcel
+# Yarn & Vite
 node_modules
 yarn-error.log
 dist
-.cache
 
 # Local Netlify folder
 .netlify

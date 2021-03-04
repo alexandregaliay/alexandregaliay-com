@@ -4,9 +4,9 @@
 
 New personal website using modern tools
 
-- :package: Parcel
+- :zap: Vite
 - :nail_care: Sass
-- :sparkles: Javascript
+- :sparkles: Vanilla JS
 
 :point_right: [Live](https://www.alexandregaliay.com)
 
