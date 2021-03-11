@@ -24,11 +24,11 @@
   }
 
   .icon {
-    background: var(--alt-color-1);
-    width: 180px;
+    width: 100px;
   }
+
   .icon path {
-    fill: #000;
+    fill: var(--alt-color-1);
   }
 
   h5 {
