@@ -1,3 +1,6 @@
+// Style
+import '../css/style.scss'
+
 // Email & tooltip
 import { emailCopy } from './utils/email.js'
 emailCopy()
