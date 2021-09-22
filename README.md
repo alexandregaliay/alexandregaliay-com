@@ -2,7 +2,7 @@
 
 # Alexandre Galiay
 
-New personal website using modern tools
+Personal website using modern tools
 
 - :zap: Vite
 - :nail_care: Sass
