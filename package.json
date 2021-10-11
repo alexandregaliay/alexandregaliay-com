@@ -11,14 +11,14 @@
     "cleanup": "rm -Rf node_modules dist/* && yarn"
   },
   "dependencies": {
-    "three": "^0.132.2"
+    "three": "^0.133.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.5",
+    "autoprefixer": "^10.3.7",
     "cssnano": "^5.0.8",
-    "postcss": "^8.3.7",
+    "postcss": "^8.3.9",
     "sass": "^1.42.1",
-    "vite": "^2.5.10"
+    "vite": "^2.6.7"
   },
   "postcss": {
     "plugins": {
