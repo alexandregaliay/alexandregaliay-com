@@ -1,6 +1,5 @@
 # MacOS & VSCode
 .DS_Store
-.vscode
 
 # Yarn & Vite
 node_modules
