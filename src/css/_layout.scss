@@ -52,14 +52,19 @@ h2 {
 p {
   line-height: 1.4em;
 
-  &.choosit {
+  &.spiriit {
     margin-top: 1em;
 
     a {
       color: #fff;
       text-decoration: underline;
       text-decoration-thickness: from-font;
+      font-weight:normal;
       @include underline(#3960ff);
+
+      span {
+        color:#3960ff;
+      }
     }
   }
 }
