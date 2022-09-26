@@ -10,6 +10,9 @@
     "serve": "vite preview",
     "cleanup": "rm -Rf node_modules dist/* && yarn"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "three": "^0.138.3"
   },
