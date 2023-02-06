@@ -1,10 +1,4 @@
-# MacOS & VSCode
-.DS_Store
-
-# Yarn & Vite
 node_modules
 yarn-error.log
 dist
-
-# Local Netlify folder
 .netlify
