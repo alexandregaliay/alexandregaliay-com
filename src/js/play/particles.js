@@ -1,9 +1,9 @@
 class Particle {
-  constructor(x,y,color) {
+  constructor(x, y, color) {
     this.x = x
     this.y = y
-    this.velX = 4*(Math.random() - 0.5)
-    this.velY = 4*(Math.random() - 0.5)
+    this.velX = 4 * (Math.random() - 0.5)
+    this.velY = 4 * (Math.random() - 0.5)
     this.defaultSize = 5
     this.color = color
     this.maxLife = 10
@@ -20,7 +20,7 @@ class Particle {
 
     this.grav += 0.05
     this.life -= 0.1
-    this.size = this.defaultSize * this.life / this.maxLife
+    this.size = (this.defaultSize * this.life) / this.maxLife
     ctx.fillStyle = this.color
 
     ctx.save()
@@ -49,38 +49,38 @@ class Particles {
     this.x = 0
     this.y = 0
     this.colors = [
-      "#333333",
-      "#570296",
-      "#ff7edb",
-      "#f97e72",
-      "#03edf9",
-      "#72f1b8",
-      "#fede5d"
+      '#333333',
+      '#570296',
+      '#ff7edb',
+      '#f97e72',
+      '#03edf9',
+      '#72f1b8',
+      '#fede5d',
     ]
   }
 
-  randomColor() {
-    return this.colors[Math.floor(Math.random()*this.colors.length)]
+  randomColor() {
+    return this.colors[Math.floor(Math.random() * this.colors.length)]
   }
 
-  mousemove() {
-    this.canvas.addEventListener('mousemove', (e)=>{
+  mousemove() {
+    this.canvas.addEventListener('mousemove', (e) => {
       this.x = e.clientX
       this.y = e.clientY
       for (let i = 0; i < 6; i++) {
-        this.particles.push(new Particle(this.x,this.y,this.randomColor()))
+        this.particles.push(new Particle(this.x, this.y, this.randomColor()))
       }
     })
   }
 
-  raf() {
+  raf() {
     this.time++
-    this.ctx.clearRect(0,0,this.width,this.height)
-    this.particles.forEach((p,i)=>{
-      if(p.life > 0) {
+    this.ctx.clearRect(0, 0, this.width, this.height)
+    this.particles.forEach((p, i) => {
+      if (p.life > 0) {
         p.draw(this.ctx)
       } else {
-        this.particles.splice(i,1)
+        this.particles.splice(i, 1)
       }
     })
     window.requestAnimationFrame(this.raf.bind(this))

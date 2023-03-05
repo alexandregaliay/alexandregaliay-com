@@ -21,7 +21,7 @@ export function init() {
   exitLetters.className = 'letters'
 
   const keySequence = ['b', 'a', 'c', 'k']
-  keySequence.forEach(letter => {
+  keySequence.forEach((letter) => {
     const letterSpan = document.createElement('span')
     letterSpan.innerText = letter
     letterSpan.className = 'letter_' + letter
@@ -44,7 +44,7 @@ export function init() {
       document.querySelector('.letter_' + e.key).classList.add('active')
     }
 
-    userInput = [ ...userInput.slice( 1 ), e.key ]
+    userInput = [...userInput.slice(1), e.key]
     if (keySequence.every((v, k) => v === userInput[k])) {
       // Remove playground
       document.querySelector('h5').remove()
@@ -58,10 +58,10 @@ export function init() {
       retrogrid = null
 
       // Re trigger animations
-      triggerAnimation('#page-transition',false)
-      triggerAnimation('#wrapper',false)
-      triggerAnimation('.links',false)
-      triggerAnimation('footer',false)
+      triggerAnimation('#page-transition', false)
+      triggerAnimation('#wrapper', false)
+      triggerAnimation('.links', false)
+      triggerAnimation('footer', false)
 
       document.body.classList.remove('play')
     }

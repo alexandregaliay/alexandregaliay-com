@@ -19,7 +19,7 @@ document.querySelector('footer a').addEventListener('click', (event) => {
     triggerAnimation('#page-transition', false)
     triggerAnimation('#wrapper', false)
     triggerAnimation('footer', false)
-    import('./play.js').then(function(page) {
+    import('./play.js').then(function (page) {
       page.init()
     })
   }

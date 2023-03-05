@@ -16,7 +16,7 @@ function copyValue(event) {
 }
 
 function updateTooltip() {
-  if(tooltip.textContent != origText) {
+  if (tooltip.textContent != origText) {
     tooltip.textContent = origText
   }
 }
