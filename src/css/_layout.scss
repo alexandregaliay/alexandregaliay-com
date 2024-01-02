@@ -1,7 +1,7 @@
 body {
   background: var(--background-color);
   color: var(--text-color);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1.4em;
   line-height: 1.8em;
@@ -38,7 +38,7 @@ a {
 h1 {
   margin: 0.25em 0 0.5em 0;
   color: var(--primary-color);
-  font-family: "Vollkorn";
+  font-family: 'Vollkorn';
   font-weight: normal;
   font-size: 2em;
   line-height: 1.3em;
@@ -59,11 +59,11 @@ p {
       color: #fff;
       text-decoration: underline;
       text-decoration-thickness: from-font;
-      font-weight:normal;
+      font-weight: normal;
       @include underline(#3960ff);
 
       span {
-        color:#3960ff;
+        color: #3960ff;
       }
     }
   }
@@ -77,8 +77,9 @@ p {
   }
 
   a {
-    color: var(--primary-color);
     @include underline(var(--primary-color));
+    color: var(--primary-color);
+    cursor: pointer;
 
     &:hover {
       color: var(--text-color);
@@ -97,6 +98,7 @@ footer {
 
   a {
     color: var(--text-color);
+    cursor: pointer;
   }
 }
 
@@ -114,7 +116,7 @@ footer {
     }
 
     a::before {
-      content: ":: ";
+      content: ':: ';
       color: var(--text-color);
     }
 
@@ -124,11 +126,11 @@ footer {
       font-weight: 300;
 
       &::before {
-        content: "(";
+        content: '(';
       }
 
       &::after {
-        content: ")";
+        content: ')';
       }
     }
   }
