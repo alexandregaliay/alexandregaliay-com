@@ -8,10 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "cleanup": "rm -Rf node_modules dist/* && yarn"
+    "cleanup": "rm -Rf node_modules dist/* && pnpm install"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "three": "^0.160.0"
