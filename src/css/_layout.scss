@@ -27,9 +27,11 @@ a {
 
 .icon {
   width: 70px;
+
   @media all and (max-width: 768px) {
     width: 60px;
   }
+
   @media all and (max-width: 480px) {
     width: 50px;
   }
@@ -77,9 +79,9 @@ p {
   }
 
   a {
-    @include underline(var(--primary-color));
     color: var(--primary-color);
     cursor: pointer;
+    @include underline(var(--primary-color));
 
     &:hover {
       color: var(--text-color);
@@ -92,6 +94,7 @@ footer {
   padding: 0 10%;
   font-size: 0.4em;
   font-style: italic;
+
   @media all and (max-width: 480px) {
     display: none;
   }
@@ -111,7 +114,7 @@ footer {
       margin-bottom: 5px;
     }
 
-    & > span {
+    &>span {
       display: none;
     }
 
