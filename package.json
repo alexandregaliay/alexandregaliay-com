@@ -13,15 +13,16 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "packageManager": "pnpm@9.11.0+sha256.1c0e33f70e5df9eede84a357bdfa0b1f9dba6e58194628d48a1055756f553754",
   "dependencies": {
-    "three": "^0.167.1"
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.5",
-    "postcss": "^8.4.41",
-    "sass": "^1.77.8",
-    "vite": "^5.4.1"
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.47",
+    "sass": "^1.79.3",
+    "vite": "^5.4.7"
   },
   "postcss": {
     "plugins": {
