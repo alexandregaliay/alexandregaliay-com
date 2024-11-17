@@ -1,3 +1,5 @@
+@use "mixins";
+
 body {
   background: var(--background-color);
   color: var(--text-color);
@@ -62,7 +64,7 @@ p {
       text-decoration: underline;
       text-decoration-thickness: from-font;
       font-weight: normal;
-      @include underline(#3960ff);
+      @include mixins.underline(#3960ff);
 
       span {
         color: #3960ff;
@@ -81,7 +83,7 @@ p {
   a {
     color: var(--primary-color);
     cursor: pointer;
-    @include underline(var(--primary-color));
+    @include mixins.underline(var(--primary-color));
 
     &:hover {
       color: var(--text-color);
