@@ -4,6 +4,7 @@
   "repository": "https://github.com/alexandregaliay/alexandregaliay-com.git",
   "author": "Alexandre Galiay <hello@alexandregaliay.com>",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
