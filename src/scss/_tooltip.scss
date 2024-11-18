@@ -1,14 +1,27 @@
-@media all and (min-width: 480px) {
-  a.email {
-    position: relative;
+a.email {
+  position: relative;
 
+  .tooltip {
+    color: var(--text-color);
+    font-size: 0.7em;
+    font-weight: 300;
+
+    &::before {
+      content: '(';
+    }
+
+    &::after {
+      content: ')';
+    }
+  }
+
+  @media all and (min-width: 480px) {
     .tooltip {
       visibility: hidden;
       width: 110px;
       background-color: var(--primary-color);
       color: var(--text-color);
-      font-weight: normal;
-      font-size: 0.7em;
+      font-weight: 400;
       line-height: 1.5em;
       text-align: center;
       padding: 5px 0;
@@ -23,18 +36,22 @@
       /* Fade in tooltip */
       opacity: 0;
       transition: opacity 0.5s;
-    }
 
-    /* Tooltip arrow */
-    .tooltip::after {
-      content: '';
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent transparent var(--primary-color);
+      &::before {
+        display: none;
+      }
+
+      /* Tooltip arrow */
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent var(--primary-color);
+      }
     }
 
     /* Show the tooltip text when you mouse over the tooltip container */
