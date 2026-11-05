@@ -16,14 +16,14 @@
   },
   "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee",
   "dependencies": {
-    "three": "^0.186.1"
+    "three": "^0.187.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.6.1",
+    "autoprefixer": "^10.6.2",
     "cssnano": "^9.9.0",
-    "postcss": "^8.5.30",
-    "sass": "^1.105.2",
-    "vite": "^8.3.4"
+    "postcss": "^8.5.32",
+    "sass": "^1.107.1",
+    "vite": "^8.3.5"
   },
   "postcss": {
     "plugins": {
